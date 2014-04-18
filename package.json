@@ -34,8 +34,8 @@
     "mocha": "*"
   },
   "dependencies": {
-    "gzip-size": "^0.1.0",
-    "pretty-bytes": "^0.1.0",
-    "chalk": "^0.4.0"
+    "chalk": "^0.4.0",
+    "gzip-size": "^0.2.0",
+    "pretty-bytes": "^0.1.0"
   }
 }
