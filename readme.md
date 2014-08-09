@@ -9,7 +9,7 @@ Useful for logging the difference between original and minified file in e.g. a b
 
 ## Install
 
-```bash
+```sh
 $ npm install --save maxmin
 ```
 
@@ -34,20 +34,20 @@ console.log(maxmin(max, min, true));
 #### max
 
 *Required*  
-Type: `String`|`Buffer`  
+Type: `string`, `buffer`  
 
 Original string.
 
 #### min
 
 *Required*  
-Type: `String`|`Buffer`  
+Type: `string`, `buffer`  
 
 Minified string.
 
 #### useGzip
 
-Type: `Boolean`  
+Type: `boolean`  
 Default: `false`
 
 Show gzipped size of `min`. Pretty slow.
@@ -55,4 +55,4 @@ Show gzipped size of `min`. Pretty slow.
 
 ## License
 
-[MIT](http://opensource.org/licenses/MIT) © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](http://sindresorhus.com)
