@@ -1,6 +1,6 @@
 {
   "name": "maxmin",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "Get a pretty output of the original, minified, gzipped size of a string or buffer: 130 B → 91 B → 53 B (gzip)",
   "license": "MIT",
   "repository": "sindresorhus/maxmin",
