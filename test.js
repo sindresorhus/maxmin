@@ -1,6 +1,6 @@
 import test from 'ava';
 import chalk from 'chalk';
-import maxmin from './';
+import maxmin from '.';
 
 const max = 'function smoothRangeRandom(min,max){var num=Math.floor(Math.random()*(max-min+1)+min);return this.prev=num===this.prev?++num:num};function smoothRangeRandom(min,max){var num=Math.floor(Math.random()*(max-min+1)+min);return this.prev=num===this.prev?++num:num};function smoothRangeRandom(min,max){var num=Math.floor(Math.random()*(max-min+1)+min);return this.prev=num===this.prev?++num:num};';
 const min = 'function smoothRangeRandom(b,c){var a=Math.floor(Math.random()*(c-b+1)+b);return this.prev=a===this.prev?++a:a}function smoothRangeRandom(b,c){var a=Math.floor(Math.random()*(c-b+1)+b);return this.prev=a===this.prev?++a:a}function smoothRangeRandom(b,c){var a=Math.floor(Math.random()*(c-b+1)+b);return this.prev=a===this.prev?++a:a};';
@@ -11,8 +11,8 @@ test('strings', t => {
 });
 
 test('buffers', t => {
-	t.is(chalk.stripColor(maxmin(new Buffer(max), new Buffer(min))), '390 B → 334 B');
-	t.is(chalk.stripColor(maxmin(new Buffer(max), new Buffer(min), true)), '390 B → 334 B → 120 B (gzip)');
+	t.is(chalk.stripColor(maxmin(Buffer.from(max), Buffer.from(min))), '390 B → 334 B');
+	t.is(chalk.stripColor(maxmin(Buffer.from(max), Buffer.from(min), true)), '390 B → 334 B → 120 B (gzip)');
 });
 
 test('integers', t => {
