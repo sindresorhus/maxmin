@@ -1,4 +1,4 @@
-# maxmin [![Build Status](https://travis-ci.org/sindresorhus/maxmin.svg?branch=master)](https://travis-ci.org/sindresorhus/maxmin)
+# maxmin [![Build Status](https://travis-ci.com/sindresorhus/maxmin.svg?branch=master)](https://travis-ci.com/github/sindresorhus/maxmin)
 
 > Get a pretty output of the original, minified, gzipped size of a string or buffer
 
@@ -6,13 +6,11 @@
 
 Useful for logging the difference between original and minified file in e.g. a build-system.
 
-
 ## Install
 
 ```
 $ npm install --save maxmin
 ```
-
 
 ## Usage
 
@@ -29,28 +27,23 @@ console.log(maxmin(max, min, true));
 
 ## API
 
-### maxmin(max, min, [useGzip])
+### maxmin(max, min, useGzip?)
 
 #### max
 
-Type: `string`, `buffer`, `number`
+Type: `string | Buffer | number`
 
 Original string or its size in bytes.
 
 #### min
 
-Type: `string`, `buffer`, `number`
+Type: `string | Buffer | number`
 
 Minified string or its size in bytes.
 
 #### useGzip
 
-Type: `boolean`  
+Type: `boolean`\
 Default: `false`
 
 Show gzipped size of `min`. Pretty slow. Not shown when `min` is a `number`.
-
-
-## License
-
-MIT © [Sindre Sorhus](http://sindresorhus.com)

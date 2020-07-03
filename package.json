@@ -4,13 +4,14 @@
   "description": "Get a pretty output of the original, minified, gzipped size of a string or buffer: 130 B → 91 B → 53 B (gzip)",
   "license": "MIT",
   "repository": "sindresorhus/maxmin",
+  "funding": "https://github.com/sponsors/sindresorhus",
   "author": {
     "name": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
-    "url": "sindresorhus.com"
+    "url": "https://sindresorhus.com"
   },
   "engines": {
-    "node": ">=0.12"
+    "node": ">=10"
   },
   "scripts": {
     "test": "xo && ava"
@@ -31,13 +32,14 @@
     "difference"
   ],
   "dependencies": {
-    "chalk": "^1.0.0",
-    "figures": "^1.0.1",
-    "gzip-size": "^3.0.0",
-    "pretty-bytes": "^3.0.0"
+    "chalk": "^4.1.0",
+    "figures": "^3.2.0",
+    "gzip-size": "^5.1.1",
+    "pretty-bytes": "^5.3.0"
   },
   "devDependencies": {
-    "ava": "*",
-    "xo": "*"
+    "ava": "^2.4.0",
+    "strip-ansi": "^6.0.0",
+    "xo": "^0.32.0"
   }
 }

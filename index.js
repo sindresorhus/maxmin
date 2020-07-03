@@ -1,20 +1,20 @@
 'use strict';
-var gzipSize = require('gzip-size');
-var prettyBytes = require('pretty-bytes');
-var chalk = require('chalk');
-var figures = require('figures');
-var arrow = ' ' + figures.arrowRight + ' ';
+const gzipSize = require('gzip-size');
+const prettyBytes = require('pretty-bytes');
+const chalk = require('chalk');
+const figures = require('figures');
+const arrow = ' ' + figures.arrowRight + ' ';
 
-function format(size) {
-	return chalk.green(prettyBytes(size));
-}
+const format = size => chalk.green(prettyBytes(size));
 
-module.exports = function (max, min, useGzip) {
-	var ret = format(typeof max === 'number' ? max : max.length) + arrow + format(typeof min === 'number' ? min : min.length);
+module.exports = function (max, min, useGzip = false) {
+	const maxString = format(typeof max === 'number' ? max : max.length);
+	const minString = format(typeof min === 'number' ? min : min.length);
+	let returnValue = maxString + arrow + minString;
 
-	if (useGzip === true && typeof min !== 'number') {
-		ret += arrow + format(gzipSize.sync(min)) + chalk.gray(' (gzip)');
+	if (useGzip && typeof min !== 'number') {
+		returnValue += arrow + format(gzipSize.sync(min)) + chalk.gray(' (gzip)');
 	}
 
-	return ret;
+	return returnValue;
 };
