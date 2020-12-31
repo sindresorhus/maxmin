@@ -1,4 +1,4 @@
-# maxmin [![Build Status](https://travis-ci.com/sindresorhus/maxmin.svg?branch=master)](https://travis-ci.com/github/sindresorhus/maxmin)
+# maxmin
 
 > Get a pretty output of the original, minified, gzipped size of a string or buffer
 
