@@ -4,18 +4,18 @@
 
 ![](screenshot.png)
 
-Useful for logging the difference between original and minified file in e.g. a build-system.
+Useful for logging the difference between original and minified file in, for example, a build-system.
 
 ## Install
 
 ```
-$ npm install --save maxmin
+$ npm install maxmin
 ```
 
 ## Usage
 
 ```js
-const maxmin = require('maxmin');
+import maxmin from 'maxmin';
 
 const max = 'function smoothRangeRandom(min,max){var num=Math.floor(Math.random()*(max-min+1)+min);return this.prev=num===this.prev?++num:num};';
 
