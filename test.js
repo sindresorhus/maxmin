@@ -7,12 +7,12 @@ const min = 'function smoothRangeRandom(b,c){var a=Math.floor(Math.random()*(c-b
 
 test('strings', t => {
 	t.is(stripAnsi(maxmin(max, min)), '390 B → 334 B');
-	t.is(stripAnsi(maxmin(max, min, true)), '390 B → 334 B → 120 B (gzip)');
+	t.is(stripAnsi(maxmin(max, min, true)), '390 B → 334 B → 121 B (gzip)');
 });
 
 test('buffers', t => {
 	t.is(stripAnsi(maxmin(Buffer.from(max), Buffer.from(min))), '390 B → 334 B');
-	t.is(stripAnsi(maxmin(Buffer.from(max), Buffer.from(min), true)), '390 B → 334 B → 120 B (gzip)');
+	t.is(stripAnsi(maxmin(Buffer.from(max), Buffer.from(min), true)), '390 B → 334 B → 121 B (gzip)');
 });
 
 test('integers', t => {

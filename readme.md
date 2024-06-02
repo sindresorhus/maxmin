@@ -8,8 +8,8 @@ Useful for logging the difference between original and minified file in, for exa
 
 ## Install
 
-```
-$ npm install maxmin
+```sh
+npm install maxmin
 ```
 
 ## Usage
